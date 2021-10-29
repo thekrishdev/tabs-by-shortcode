@@ -38,7 +38,7 @@ function sts_tabs_data_shortcode($atts, $content) {
 }
 add_shortcode('tabs', 'sts_tabs_data_shortcode');
 
-// Tab item shortcode
+// tabs-by-shortcode
 function sts_tab_shortcode($atts, $content) {
 	// Default attributes value
 	$atts = shortcode_atts(
@@ -72,7 +72,7 @@ function sts_admin_notices() {
 	// Check for option before displaying notice
 	if(get_option('sts_activation_notice')) {
 		// Display notice
-		echo '<div class="notice notice-info"><p>'.sprintf(__('<strong>Important</strong>: Make sure to <a href="%s">add own CSS style</a> to your theme’s stylesheet to ensure proper display of the tabs.', 'simple-tabs-shortcodes'), 'https://wordpress.org/plugins/simple-tabs-shortcodes/#faq').'</p></div>';
+		echo '<div class="notice notice-info"><p>'.sprintf(__('<strong>Important</strong>: Make sure to <a href="%s">add own CSS style</a> to your theme’s stylesheet to ensure proper display of the tabs.', 'tabs-by-shortcode'), 'https://krish.dev').'</p></div>';
 		// Delete option after notice appears
 		delete_option('sts_activation_notice');
 	}
